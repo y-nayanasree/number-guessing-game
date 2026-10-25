@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-card">
+        <div class="badge">💎 MINI GAME</div>
+        <h1>🔢 Number Guessing Game</h1>
+        <p class="subtitle">Guess the secret number between 1 and 100!</p>
+
+        <div class="range-box">
+            <span>🎯 Range</span>
+            <strong>1 – 100</strong>
+        </div>
+
+        <form id="guessForm">
+            <label for="guessInput">Enter your guess</label>
+            <input
+                type="number"
+                id="guessInput"
+                min="1"
+                max="100"
+                placeholder="Enter a number..."
+                required
+            >
+            <button type="submit" id="guessBtn">Check My Guess</button>
+        </form>
+
+        <div id="message" class="message" aria-live="polite">
+            Let's play! Enter a number to begin.
+        </div>
+
+        <section class="stats">
+            <div class="stat">
+                <span>Attempts</span>
+                <strong id="attempts">0</strong>
+            </div>
+            <div class="stat">
+                <span>Best Score</span>
+                <strong id="bestScore">—</strong>
+            </div>
+        </section>
+
+        <button type="button" id="playAgainBtn" class="again-btn">
+            🔄 Play Again
+        </button>
+
+        <p class="hint">💡 Every guess brings you closer!</p>
+        <p class="footer">Built with HTML, CSS & JavaScript 💜</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
